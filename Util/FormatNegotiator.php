@@ -43,10 +43,7 @@ class FormatNegotiator implements FormatNegotiatorInterface
         }
 
         $catchAllEnabled = in_array('*/*', $priorities);
-        /**
-         * @todo https://github.com/FriendsOfSymfony/FOSRestBundle/issues/208
-         */
-        return 'json';
+
         return $this->getFormatByPriorities($request, $mimetypes, $priorities, $catchAllEnabled);
     }
 
